@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>某家饭店的全部点评</title>
+<link type="text/css" href="http://i2.static.dp/s/c/app/main/base-old.css" rel="stylesheet">
+<link type="text/css" href="http://i2.static.dp/s/c/app/pic/hackathon.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>某家饭店de点评</h1>
+        <div class="searchCtn">
+            <input type="text" id="searchIpt" placeholder = '请输入商户ID'/>
+            <input type="button" id="searchBtn" value="搜商户"/>
+        </div>
+    </header>
+    <section>
+        <h2>大家印象</h2>
+        <div class="tagCtn">
+            <ul class="clearfix">
+                
+            </ul>
+        </div>
+        <div class="commentCtn">
+            <ul>
+               
+            </ul>
+        </div>
+    </section>
+    <footer>
+        
+    </footer>
+ 
+
+<script>
+    var __loaderConfig={appBase:'s/j/app/',libBase:'lib/1.0/',server:'i{n}.static.dp:1337'};
+</script>
+<script src="http://i2.static.dp/lib/1.0/neuron-active.js"></script>
+<script>DP.load("http://i2.static.dp/x_x/version.js");DP.require('Main::header');DP.load('http://i2.static.dp/s/res/ga.js');</script>
+<script>
+    var shopId = 100000;
+    DP.require({
+        mod: 'Pic::tag-comment',
+        config: {
+            'url': '/ReviewSummarizer-0.1/shopReviewAction.action'        
+        }
+    });
+   
+</script>
+</body>
+</html>

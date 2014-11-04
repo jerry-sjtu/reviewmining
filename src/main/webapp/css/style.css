@@ -1,0 +1,72 @@
+@CHARSET "UTF-8";
+div {
+margin-top:10px;
+margin-bottom:10px;
+}
+
+.highlightPOS {background-color:#FFD700}
+.highlightNEG {background-color:#11D700}
+.red {color:red}
+body
+{
+background: #F7F7F7
+}
+.head {
+border: #73A0CF 1px dashed;
+line-height: 26px;
+}
+
+
+.header {
+
+height: 38px;
+margin-top: 7px;
+margin-bottom:7px;
+margin-left: auto;
+margin-right: auto;
+background: #F7F7F7;
+width:500px;
+}
+
+#reviewHightlight
+{
+background: white;
+border: #73A0CF 1px dashed;
+line-height: 26px;
+padding: 8px 12px;
+margin-top:10px;
+margin-bottom:10px;
+
+}
+#load {
+background: white;
+border: #73A0CF 1px dashed;
+line-height: 26px;
+padding: 8px 12px;
+margin-top:10px;
+margin-bottom:10px;
+}
+#mainbody
+{
+	margin-left:300px;
+	margin-right:200px
+}
+#left
+{
+	float: left;
+	width:200px;
+}
+#right
+{
+	float: right;
+	width:150px;
+	background-color: #F0F6E4;
+}
+#attention
+{
+	color:red; 
+	font-size:32px;
+	font-weight: bolder;
+	height:80px;
+	padding: 8px 12px;
+}

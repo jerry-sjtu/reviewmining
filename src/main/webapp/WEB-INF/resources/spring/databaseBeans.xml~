@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- Data source configuration -->
+	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		id="dataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/db" />
+		<property name="username" value="test" />
+		<property name="password" value="test" />
+	</bean>
+
+	<!-- Hibernate session factory -->
+	<bean
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"
+		id="sessionFactory">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<!-- In prod set to "validate", in test set to "create-drop" -->
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<!-- In prod set to "false" -->
+				<prop key="hibernate.show_sql">false</prop>
+				<!-- In prod set to "false" -->
+				<prop key="hibernate.format_sql">true</prop>
+				<!-- In prod set to "false" -->
+				<prop key="hibernate.use_sql_comments">true</prop>
+				<!-- In prod set to "false", in test set to "true" -->
+				<prop key="hibernate.cache.use_second_level_cache">false</prop>
+			</props>
+		</property>
+		<property name="packagesToScan" value="net.zabuchy" />
+	</bean>
+
+</beans>
